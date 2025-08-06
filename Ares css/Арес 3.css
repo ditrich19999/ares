@@ -1,0 +1,157 @@
+html {
+    box-sizing: border-box;
+}
+ *, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    max-width: 100%;
+    background: url(../картинки/вакансии.jpg) no-repeat center center fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 100%;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 220px;
+}
+.t {
+    justify-content: center;
+    color:yellow ;
+    font-size: 25px;
+    display: flex;
+    width: 220px;
+    padding: 10px;
+    background-color:  #e951d68c;
+}
+.m {
+    justify-content: center;
+    color:yellow ;
+    font-size: 25px;
+    display: flex;
+    width: 220px;
+    padding: 10px;
+    background-color:  #e951d68c;
+}
+.header {
+    max-width: 220px;
+    margin: 0 auto;
+    border-radius: 10px 10px 90px 90px;
+    margin-top: 50px;
+    background-image: url(../картинки/Арес\ бюст.png);
+    min-height: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+.menu {
+    width: calc(30% - 20px);
+    min-width: 220px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 28px;
+    background: rgba(12, 34, 13, 0.71);
+    height: 50px;
+    margin: 50px 10px;
+}
+img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    padding-left: 15px;
+}
+.vac {
+    display: flex;
+    flex-direction: column;
+}
+.baz {
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: left;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(144, 132, 113, 0.502);
+    color: rgb(255, 244, 244);
+}
+h1 {
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+    text-align:center;
+}
+#wp {
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.vac1, .vac2 {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.qwe {
+    padding-left: 15px;
+}
+a {
+    color: rgb(244, 236, 9);
+    text-decoration: none;
+    cursor: grab;
+}
+a:hover {
+    color:  rgb(230, 122, 59);
+    text-decoration: underline;
+    cursor: grab;
+}
+.end {
+    background: #00ff7f9e;
+    padding-left: 20px;
+}
+h2 {
+    padding-top: 20px ;
+    text-align: center;
+    font-size:35px;
+}
+footer a {
+    color: purple;
+    font-size: 25px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: red;
+}
+footer u {
+    color: purple;
+    font-size: 25px;
+    text-decoration: none;
+}
+footer u:hover {
+    color: red;
+}
+.address {
+    padding-bottom: 20px;
+}
+.footer {
+    width: 150px;
+    height: 50px;
+}
+@keyframes myAnimation {
+    0% { opacity: 0; }
+}
+.header {
+    animation: myAnimation 3s;
+}
+@media screen and (max-width:770px) {
+    .col-md-6 {
+        width: calc(50% - 20px);
+        margin: 10px auto;
+    }
+}
