@@ -1,9 +1,19 @@
 html {
     box-sizing: border-box;
 }
- *, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
     max-width: 100%;
     background: url(../картинки/вакансии.jpg) no-repeat center center fixed;
@@ -13,6 +23,7 @@ body {
     background-size: contain;
     height: 100%;
 }
+
 .info {
     display: flex;
     justify-content: center;
@@ -20,37 +31,80 @@ body {
     flex-direction: column;
     min-width: 220px;
 }
+
 .t {
     justify-content: center;
-    color:yellow ;
+    color: yellow;
     font-size: 25px;
     display: flex;
     width: 220px;
     padding: 10px;
-    background-color:  #e951d68c;
+    background-color: #e951d68c;
 }
+
 .m {
     justify-content: center;
-    color:yellow ;
+    color: yellow;
     font-size: 25px;
     display: flex;
     width: 220px;
     padding: 10px;
-    background-color:  #e951d68c;
+    background-color: #e951d68c;
 }
-.header {
-    max-width: 220px;
-    margin: 0 auto;
-    border-radius: 10px 10px 90px 90px;
-    margin-top: 50px;
-    background-image: url(../картинки/Арес\ бюст.png);
-    min-height: 220px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
+
+/* Вращение текста вокруг логотипа */
+.volume {
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    background-color: rgba(56, 52, 52, 0.733);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
 }
+
+.rotate {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.text-rotate {
+    position: relative;
+}
+
+.circle-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    position: absolute;
+    top: 202px;
+}
+
+svg {
+    animation: rotate 20s linear infinite;
+    /* Добавляем анимацию вращения */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Конец */
+
 .navigation {
     display: flex;
     justify-content: center;
 }
+
 .menu {
     width: calc(30% - 20px);
     min-width: 220px;
@@ -63,16 +117,12 @@ body {
     height: 50px;
     margin: 50px 10px;
 }
-img {
-    width: 150px;
-    height: 150px;
-    float: left;
-    padding-left: 15px;
-}
+
 .vac {
     display: flex;
     flex-direction: column;
 }
+
 .baz {
     margin-top: 50px;
     font-size: 30px;
@@ -81,74 +131,149 @@ img {
     background-color: rgba(144, 132, 113, 0.502);
     color: rgb(255, 244, 244);
 }
+
 h1 {
     color: green;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
-    text-align:center;
+    text-align: center;
+    text-transform: uppercase;
 }
+
+.princip {
+    text-transform: uppercase;
+    color: green;
+    font-size: 30px;
+}
+
 #wp {
     color: green;
     font-size: 30px;
     font-weight: bold;
     padding-left: 15px;
 }
-.vac1, .vac2 {
+
+.vac1,
+.vac2 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 20px;
+    color: black;
+
 }
+
+.vac1 img {
+    width: 280px;
+    height: 250px;
+}
+
 .qwe {
-    padding-left: 15px;
+    padding-left: 50px;
+    font-size: 40px;
 }
+
 a {
     color: rgb(244, 236, 9);
     text-decoration: none;
     cursor: grab;
 }
+
 a:hover {
-    color:  rgb(230, 122, 59);
+    color: rgb(230, 122, 59);
     text-decoration: underline;
     cursor: grab;
 }
+
 .end {
-    background: #00ff7f9e;
+    background: #0d0d0ed3;
     padding-left: 20px;
 }
-h2 {
-    padding-top: 20px ;
+
+h3 {
+    padding-top: 20px;
     text-align: center;
-    font-size:35px;
+    font-size: 35px;
+    color: #fff;
 }
+
 footer a {
-    color: purple;
-    font-size: 25px;
+    color: rgb(255, 250, 255);
+    font-size: 35px;
     text-decoration: none;
+    padding-top: 20px;
 }
+
 footer a:hover {
     color: red;
 }
+
 footer u {
-    color: purple;
-    font-size: 25px;
+    color: rgb(255, 250, 255);
+    font-size: 35px;
     text-decoration: none;
+    padding-top: 20px;
 }
+
 footer u:hover {
     color: red;
 }
-.address {
-    padding-bottom: 20px;
-}
-.footer {
+
+.copyright {
     width: 150px;
     height: 50px;
+    color: antiquewhite;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    margin: 0 auto;
 }
+
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_mini {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgba(230, 122, 59);
+    margin: 0;
+}
+
+.cen {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.geo {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.fa-solid {
+    font-size: 100px;
+    color: #c6c116;
+}
+
 @keyframes myAnimation {
-    0% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
 }
-.header {
-    animation: myAnimation 3s;
-}
+
 @media screen and (max-width:770px) {
     .col-md-6 {
         width: calc(50% - 20px);
