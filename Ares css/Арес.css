@@ -1,9 +1,19 @@
 html {
     box-sizing: border-box;
- }
- *, *::before, *::after {
+}
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
- }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
     max-width: 100%;
     background: url(../картинки/фон\ сайта.png) no-repeat center center fixed;
@@ -13,6 +23,7 @@ body {
     background-size: cover;
     height: 100%;
 }
+
 .info {
     display: flex;
     justify-content: center;
@@ -20,51 +31,82 @@ body {
     flex-direction: column;
     min-width: 220px;
 }
+
 .t {
     justify-content: center;
-    color:yellow ;
+    color: yellow;
     font-size: 25px;
     display: flex;
     width: 220px;
     padding: 10px;
-    background-color:  #e951d68c;
+    background-color: #e951d68c;
 }
+
 .m {
     justify-content: center;
-    color:yellow ;
+    color: yellow;
     font-size: 25px;
     display: flex;
     width: 220px;
     padding: 10px;
-    background-color:  #e951d68c;
+    background-color: #e951d68c;
 }
-.header {
-    max-width: 220px;
-    margin: 0 auto;
-    border-radius: 10px 10px 90px 90px;
-    margin-top: 50px;
-    background-image: url(../картинки/Арес\ бюст.png);
-    min-height: 220px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
+
+/* Вращение текста вокруг логотипа */
+.volume {
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    background-color: rgba(56, 52, 52, 0.733);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
 }
-.element {
-display: flex;
-justify-content: center;
-text-align: center;
-max-width: 750px;
-margin: 20px auto;
-font-size: 38px;
-color: rgb(230, 122, 59);
-border-radius: 10px 10px 10px 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
-background-color: rgb(35, 28, 17);
+
+.rotate {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
 }
+
+.text-rotate {
+    position: relative;
+}
+
+.circle-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    position: absolute;
+    top: 202px;
+}
+
+svg {
+    animation: rotate 20s linear infinite;
+    /* Добавляем анимацию вращения */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Конец */
+
 .navigation {
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
 }
+
 .menu {
     width: calc(33% - 20px);
     justify-content: center;
@@ -76,22 +118,82 @@ background-color: rgb(35, 28, 17);
     height: 50px;
     margin: 10px 10px;
 }
+
 a {
     color: rgb(244, 236, 9);
     text-decoration: none;
     cursor: grab;
 }
+
 a:hover {
-    color:  rgb(230, 122, 59);
+    color: rgb(230, 122, 59);
+    ;
     text-decoration: underline;
     cursor: grab;
 }
+
 h1 {
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
     color: rgb(253, 250, 250);
 }
+
+.o {
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 15px rgba(201, 19, 19, 0.86);
+    background-color: rgba(191, 123, 13, 0.502);
+    color: rgb(255, 244, 244);
+}
+
+.about {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin: 100px auto;
+}
+
+.fa-solid {
+    font-size: 80px;
+}
+
+.material-icons {
+    font-size: 110px;
+}
+
+.fa-registered {
+    font-size: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(219, 216, 2, 0.821);
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid gold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.text-p {
+    color: black;
+}
+
+.card:hover {
+    background-color: #fff;
+    border: none;
+    transition: 0.5s;
+    color: rgba(161, 193, 44, 80%);
+    font-size: 25px;
+    padding: 5px 10px;
+}
+
 .begin {
     margin-top: 50px;
     font-size: 30px;
@@ -100,12 +202,15 @@ h1 {
     background-color: rgba(144, 132, 113, 0.502);
     color: WHITE;
 }
+
 span {
     font-size: 20px;
 }
+
 u {
     font-size: 25px;
 }
+
 h2 {
     margin-top: 50px;
     font-size: 30px;
@@ -115,6 +220,7 @@ h2 {
     background-color: rgba(191, 123, 13, 0.502);
     color: rgb(251, 251, 251);
 }
+
 #ru {
     font-size: 50px;
     font-weight: bold;
@@ -122,6 +228,7 @@ h2 {
     margin-top: 50px;
     color: rgb(255, 250, 250);
 }
+
 .last {
     margin-top: 50px;
     font-size: 30px;
@@ -130,63 +237,112 @@ h2 {
     background-color: rgba(144, 132, 113, 0.502);
     color: rgb(255, 244, 244);
 }
+
 .end {
-    background: #00ff7f9e;
+    background: #0d0d0ed3;
     padding-left: 20px;
 }
+
 h3 {
-    padding-top: 20px ;
+    padding-top: 20px;
     text-align: center;
-    font-size:35px;
+    font-size: 35px;
+    color: #fff;
 }
+
 footer a {
-    color: purple;
-    font-size: 25px;
+    color: rgb(255, 250, 255);
+    font-size: 35px;
     text-decoration: none;
+    padding-top: 20px;
 }
+
 footer a:hover {
     color: red;
 }
+
 footer u {
-    color: purple;
-    font-size: 25px;
+    color: rgb(255, 250, 255);
+    font-size: 35px;
     text-decoration: none;
+    padding-top: 20px;
 }
+
 footer u:hover {
     color: red;
 }
-.address {
-    padding-bottom: 20px;
-}
-.footer {
+
+.copyright {
     width: 150px;
     height: 50px;
+    color: antiquewhite;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    margin: 0 auto;
 }
-@keyframes myAnimation {
-    0% { opacity: 0; }
+
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.header {
-    animation: myAnimation 3s;
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.element {
-    animation: myAnimation 3s;
+
+.logo_mini {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
+
+.name {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgba(230, 122, 59);
+    margin: 0;
+}
+
+.cen {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.geo {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.fa-solid {
+    font-size: 100px;
+    color: #c6c116;
+}
+
+
+
 @media screen and (max-width:770px) {
     .col-md-6 {
         width: calc(50% - 20px);
         margin: 10px auto;
     }
 }
+
 @media screen and (max-width:576px) {
     .col-sm-6 {
         width: calc(50% - 20px);
     }
 }
+
 @media screen and (max-width:400px) {
     .col-lg-12 {
         width: calc(60% - 20px);
     }
 }
+
 @media screen and (max-width:200px) {
     .col-big {
         width: calc(100% - 20px);
