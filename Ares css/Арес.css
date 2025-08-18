@@ -369,6 +369,9 @@ footer u:hover {
     .about {
         gap: 20px;
     }
+    .rotate {
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width:400px) {
