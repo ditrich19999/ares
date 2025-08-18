@@ -329,6 +329,7 @@ footer u:hover {
     .flex-footer {
         flex-direction: column;
     }
+
     .cen {
         padding-top: 50px;
     }
@@ -345,8 +346,6 @@ footer u:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-
     .end {
         height: auto;
     }
@@ -360,15 +359,19 @@ footer u:hover {
     .col-sm-6 {
         width: calc(50% - 20px);
     }
+
     .volume {
         transform: scale(0.5);
     }
+
     .circle-image {
         top: 48px;
     }
+
     .about {
         gap: 20px;
     }
+
     .small-576 {
         font-size: 25px;
     }

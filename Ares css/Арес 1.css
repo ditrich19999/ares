@@ -286,10 +286,95 @@ footer u:hover {
     color: #c6c116;
 }
 
+@media screen and (max-width: 1280px) {
+    .baz {
+        width: 90%;
+        margin: 0 auto;
+    }
 
-@media screen and (max-width:770px) {
+    .inner {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .item2 {
+        height: auto;
+    }
+
+    .flex-footer {
+        flex-direction: column;
+    }
+
+    .cen {
+        padding-top: 50px;
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
     .col-md-6 {
         width: calc(50% - 20px);
         margin: 10px auto;
+    }
+
+    .link {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list1 {
+        margin: 50px 0;
+    }
+
+    .inner {
+        height: 2850px;
+    }
+
+    .end {
+        height: auto;
+    }
+
+    .logo {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width:576px) {
+    .col-sm-6 {
+        width: calc(50% - 20px);
+    }
+
+    .volume {
+        transform: scale(0.5);
+    }
+
+    .circle-image {
+        top: 48px;
+    }
+
+    .small-576 {
+        font-size: 25px;
+    }
+
+    .baz {
+        width: 90%;
+    }
+.inner {
+    justify-items: start;
+    justify-content: center;
+}
+    .item2 {
+        padding: 0 0 0 10px;
+        margin: 0 auto;
+
+    }
+
+    .item2 p {
+        width: 260px;
+    }
+
+    .item2 ul {
+        width: 260px;
     }
 }
