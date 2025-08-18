@@ -196,6 +196,7 @@ h1 {
 
 .begin {
     margin-top: 50px;
+    padding: 10px;
     font-size: 30px;
     text-align: left;
     border-radius: 10px 10px 10px 10px;
@@ -231,6 +232,7 @@ h2 {
 
 .last {
     margin-top: 50px;
+    padding: 10px;
     font-size: 30px;
     text-align: left;
     border-radius: 10px 10px 10px 10px;
@@ -323,17 +325,49 @@ footer u:hover {
 }
 
 
+@media screen and (max-width: 1280px) {
+    .flex-footer {
+        flex-direction: column;
+    }
+    .cen {
+        padding-top: 50px;
+    }
+}
 
 @media screen and (max-width:770px) {
     .col-md-6 {
         width: calc(50% - 20px);
         margin: 10px auto;
     }
+
+    .about {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .end {
+        height: auto;
+    }
+
+    .logo {
+        transform: scale(0.5);
+    }
 }
 
 @media screen and (max-width:576px) {
     .col-sm-6 {
         width: calc(50% - 20px);
+    }
+    .volume {
+        transform: scale(0.5);
+    }
+    .circle-image {
+        top: 48px;
+    }
+    .about {
+        gap: 20px;
     }
 }
 
