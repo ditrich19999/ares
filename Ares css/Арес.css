@@ -323,19 +323,6 @@ footer u:hover {
 }
 
 
-@keyframes myAnimation {
-    0% {
-        opacity: 0;
-    }
-}
-
-.header {
-    animation: myAnimation 3s;
-}
-
-.element {
-    animation: myAnimation 3s;
-}
 
 @media screen and (max-width:770px) {
     .col-md-6 {
