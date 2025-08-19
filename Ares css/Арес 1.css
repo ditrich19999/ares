@@ -293,12 +293,14 @@ footer u:hover {
     }
 
     .inner {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
     }
 
     .item2 {
-        height: auto;
+        width: 90%;
+        min-height: 690px;
+        margin: 0 auto;
     }
 
     .flex-footer {
@@ -327,8 +329,8 @@ footer u:hover {
         margin: 50px 0;
     }
 
-    .inner {
-        height: 2850px;
+    .baz {
+        margin-bottom: 50px;
     }
 
     .end {
@@ -336,7 +338,11 @@ footer u:hover {
     }
 
     .logo {
-        transform: scale(0.5);
+        transform: scale(0.8);
+    }
+
+    .fa-solid {
+        font-size: 60px;
     }
 }
 
@@ -354,16 +360,18 @@ footer u:hover {
     }
 
     .small-576 {
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .baz {
         width: 90%;
     }
-.inner {
-    justify-items: start;
-    justify-content: center;
-}
+
+    .inner {
+        justify-items: start;
+        justify-content: center;
+    }
+
     .item2 {
         padding: 0 0 0 10px;
         margin: 0 auto;
