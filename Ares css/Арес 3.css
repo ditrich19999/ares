@@ -277,10 +277,54 @@ footer u:hover {
         opacity: 0;
     }
 }
+@media screen and (max-width: 1280px) {
+    .flex-footer {
+        flex-direction: column;
+    }
 
+    .cen {
+        padding-top: 50px;
+    }
+}
 @media screen and (max-width:770px) {
     .col-md-6 {
         width: calc(50% - 20px);
         margin: 10px auto;
     }
+    .end {
+        height: auto;
+    }
+
+    .logo {
+        transform: scale(0.8);
+    }
+    .fa-solid {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:576px) {
+    .col-sm-6 {
+        width: calc(50% - 20px);
+    }
+
+    .volume {
+        transform: scale(0.5);
+    }
+
+    .circle-image {
+        top: 48px;
+    }
+
+    .small-576 {
+        font-size: 35px;
+    }
+    .vac h1 {
+        font-size: 30px;
+    }
+    
+    .qwe {
+        font-size: 30px;
+        padding-left: 25px;
+    }
+
 }
